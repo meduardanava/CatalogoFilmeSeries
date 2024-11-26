@@ -1,0 +1,25 @@
+<div>
+  <h2>Favoritos de Filmes</h2>
+  <ul>
+    <li *ngFor="let movie of movies">
+      <h3>{{ movie.Title }}</h3>
+      <p><strong>Gênero:</strong> {{ movie.Genre }}</p>
+      <p><strong>Ano:</strong> {{ movie.Year }}</p>
+      <p><strong>Sinopse:</strong> {{ movie.Synopsis }}</p>
+      <button (click)="removeFromFavorites(movie)">Remover</button>
+    </li>
+  </ul>
+</div>
+
+<div>
+  <h2>Favoritos de Séries</h2>
+  <ul>
+    <li *ngFor="let series of series">
+      <h3>{{ series.Title }}</h3>
+      <p><strong>Gênero:</strong> {{ series.Genre }}</p>
+      <p><strong>Ano:</strong> {{ series.Year }}</p>
+      <p><strong>Sinopse:</strong> {{ series.Synopsis }}</p>
+      <button (click)="removeFromFavorites(series)">Remover</button>
+    </li>
+  </ul>
+</div>

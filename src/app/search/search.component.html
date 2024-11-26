@@ -1,0 +1,27 @@
+<div>
+  <form (ngSubmit)="search()">
+    <input
+      type="text"
+      [(ngModel)]="searchQuery"
+      placeholder="Digite o título do Filme ou Série"
+      name="query"
+    />
+    <button type="submit">Buscar</button>
+  </form>
+</div>
+
+<div *ngIf="searchResults.length > 0">
+  <h2>Resultados:</h2>
+  <ul>
+    <li *ngFor="let result of searchResults">
+      <h3>{{ result.Title }}</h3>
+      <p><strong>Ano:</strong> {{ result.Year }}</p>
+      <p><strong>Tipo:</strong> {{ result.Type }}</p>
+      <button (click)="addToFavorites(result)">Adicionar aos Favoritos</button>
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="errorMessage">
+  <p>{{ errorMessage }}</p>
+</div>

@@ -1,0 +1,5 @@
+<app-item-details
+  *ngFor="let result of searchResults"
+  [item]="result"
+  (favoriteToggle)="addToFavorites(result)">
+</app-item-details>

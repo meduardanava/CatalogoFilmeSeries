@@ -1,0 +1,11 @@
+.movie-item {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.movie-item img {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}

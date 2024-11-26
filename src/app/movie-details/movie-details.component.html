@@ -1,0 +1,11 @@
+<app-movie-details [movies]="movies"></app-movie-details>
+
+<div *ngif="movie">
+  <img [src]="movie.Poster" alt="Poster"/>
+  <h2>{{movie.Title}} ({{ movie.Year}})</h2>
+  <p><strong>Classificação: </strong> {{movie.Rated}}</p>
+  <p><strong>Elenco: </strong> {{movie.Actors}}</p>
+  <p><strong>Duração: </strong> {{movie.Runtime}}</p>
+  <p><strong>Sinopse: </strong> {{movie.Plot}}</p>
+  <p><strong>Prêmios: </strong> {{movie.Awards}}</p>
+</div>
